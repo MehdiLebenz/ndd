@@ -42,7 +42,7 @@ export default function BoxInput() {
           item
           xs={false}
           sm={4}
-          md={7}
+          md={6}
           sx={{
             backgroundImage: `url(${cover})`,
             backgroundRepeat: "no-repeat",
@@ -61,7 +61,7 @@ export default function BoxInput() {
           item
           xs={12}
           sm={8}
-          md={5}
+          md={6}
           component={Paper}
           elevation={6}
           square
