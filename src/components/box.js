@@ -8,7 +8,7 @@ import Grid from "@mui/material/Grid";
 import { ThemeProvider } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import emailjs from "emailjs-com";
-import Retail from "../image/Retail.png";
+import cover from "../image/cover.png";
 import theme from "../css/theme.js";
 
 export default function BoxInput() {
@@ -44,9 +44,9 @@ export default function BoxInput() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: `url(${Retail})`,
+            backgroundImage: `url(${cover})`,
             backgroundRepeat: "no-repeat",
-            backgroundSize: "50%",
+            backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
@@ -81,11 +81,12 @@ export default function BoxInput() {
               <Typography
                 component="h2"
                 variant="h4"
-                sx={{ textAlign: "center" }}
+                sx={{ textAlign: "center" , color: "#1d2748"}}
               >
-                This domain is for sale if you are interested <br />
-                enter your email
-              </Typography>
+                This domain name is now available for sale. <br/>
+                Enter your email below to purchase this valuable domain name.<br/>
+                you will be contacted shortly by the owner              
+                </Typography>
               <TexfieldInput />
               <ButtonSend />
             </Box>

@@ -1,14 +1,14 @@
 import React from 'react'
-import altavia from '../image/altavia.png'
+import logo from '../image/logo.png'
 import styled from 'styled-components'
 
 const Image = styled.img`
-    width:10%;
+    width:3%;
 `;
 
 const HeaderWrapper = styled.div`
     height: 100px;
-    background: #000 0 0 no-repeat padding-box;
+    background: #1d2748 0 0 no-repeat padding-box;
     top: 0;
     left: 0;
     right: 0;
@@ -22,7 +22,7 @@ const HeaderWrapper = styled.div`
 const  Header = () => (
 
     <HeaderWrapper>
-        <Image src={altavia} alt='Altavia'></Image>
+        <Image src={logo} alt='Altavia'></Image>
     </HeaderWrapper>
 )
 

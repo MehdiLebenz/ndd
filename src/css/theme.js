@@ -5,7 +5,7 @@ const theme = createTheme({
       background: "#bbbb",
     },
     text: {
-      primary: "#bbbb",
+      primary: "#1d2748",
     },
     container: {
       display: "flex",

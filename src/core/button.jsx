@@ -8,7 +8,7 @@ const ButtonSend = () => {
         type="submit"
         value="Send"
         variant="contained"
-        sx={{ mt: 2, mb: 1, bgcolor: "text.primary" }}
+        sx={{ mt: 2, mb: 1, bgcolor: "#1d2748" }}
       >
         Send
       </Button>
