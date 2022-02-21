@@ -1,7 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import ButtonSend from "../core/button";
 import CssBaseline from "@mui/material/CssBaseline";
-import TexfieldInput from "../core/textfield";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -10,8 +9,22 @@ import Typography from "@mui/material/Typography";
 import emailjs from "emailjs-com";
 import cover from "../image/cover.png";
 import theme from "../css/theme.js";
+import TextField from "@mui/material/TextField";
+import { string } from "yup";
+
 
 export default function BoxInput() {
+  const [email, setEmail] = useState("");
+  const [valid, setValid] = useState(false);
+  const handleChangeEmail = e => {
+    const Emailvalue = e.currentTarget.value;
+    setEmail(Emailvalue);
+    setValid(
+      string()
+        .email()
+        .isValidSync(Emailvalue)
+    );
+  };
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -68,8 +81,6 @@ export default function BoxInput() {
         >
           <form ref={form} onSubmit={sendEmail}>
             <Box
-              ref={form}
-              onSubmit={sendEmail}
               sx={{
                 my: 8,
                 mx: 4,
@@ -87,7 +98,40 @@ export default function BoxInput() {
                 Enter your email below to purchase this valuable domain name.<br/>
                 you will be contacted shortly by the owner              
                 </Typography>
-              <TexfieldInput />
+                <TextField
+    margin="normal"
+    required
+    value={email}
+    id="email"
+    label="Email"
+    name="email"
+    oinChange={handleChangeEmail}
+    autoComplete="email"
+    autoFocus
+    sx={{
+      mt: 7,
+      mb: 3,
+      width: 300,
+    }}
+  />
+    <span style={{ color: "red"}}>{valid ? "" : "Please provide a valid email"}</span>
+
+             <TextField
+    margin="normal"
+    required
+    name = "domain"
+    id="Domain"
+    label="Domain"
+    name="domain"
+    autoComplete="domain"
+    autoFocus
+    sx={{
+      mt: 3,
+      mb: 3,
+      width: 300,
+    }}
+  />
+   
               <ButtonSend />
             </Box>
           </form>
