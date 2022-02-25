@@ -105,7 +105,7 @@ export default function BoxInput() {
     id="email"
     label="Email"
     name="email"
-    oinChange={handleChangeEmail}
+    onChange={handleChangeEmail}
     autoComplete="email"
     autoFocus
     sx={{
@@ -122,7 +122,6 @@ export default function BoxInput() {
     name = "domain"
     id="Domain"
     label="Domain"
-    name="domain"
     autoComplete="domain"
     autoFocus
     sx={{
