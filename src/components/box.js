@@ -59,7 +59,7 @@ export default function BoxInput() {
           sx={{
             backgroundImage: `url(${cover})`,
             backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
+            backgroundSize: "50%",
             backgroundPosition: "center",
           }}
         />

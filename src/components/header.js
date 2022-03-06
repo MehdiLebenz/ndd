@@ -3,7 +3,7 @@ import logo from '../image/logo.png'
 import styled from 'styled-components'
 
 const Image = styled.img`
-    width:3%;
+    width:5%;
 `;
 
 const HeaderWrapper = styled.div`
@@ -22,7 +22,7 @@ const HeaderWrapper = styled.div`
 const  Header = () => (
 
     <HeaderWrapper>
-        <Image src={logo} alt='Altavia'></Image>
+        <Image src={logo} alt='ndd'></Image>
     </HeaderWrapper>
 )
 
