@@ -128,7 +128,7 @@ export default function BoxInput() {
     }}
   />
     <span style={{ color: "red"}}>{valid ? "" : "Please provide a valid email"}</span>
-  {domain ? <TextField
+  <TextField
     margin="normal"
     required
     name = "domain"
@@ -144,7 +144,7 @@ export default function BoxInput() {
       width: 300,
     }}
   />
-   : ''}
+   
               <ButtonSend isDisabled= {!domain} />
             </Box>
           </form>
