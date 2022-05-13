@@ -128,12 +128,11 @@ export default function BoxInput() {
     }}
   />
     <span style={{ color: "red"}}>{valid ? "" : "Please provide a valid email"}</span>
-  <TextField
+  {domain ? <TextField
     margin="normal"
     required
     name = "domain"
     id="Domain"
-    disabled
     value={domain}
     label="Domain"
     autoComplete="domain"
@@ -144,7 +143,7 @@ export default function BoxInput() {
       width: 300,
     }}
   />
-   
+   : ''}
               <ButtonSend isDisabled= {!domain} />
             </Box>
           </form>
