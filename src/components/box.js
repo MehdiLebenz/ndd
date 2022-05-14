@@ -59,7 +59,7 @@ export default function BoxInput() {
         }
       );
   };
-
+console.log(domain)
   return (
     <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: "90vh" }}>
