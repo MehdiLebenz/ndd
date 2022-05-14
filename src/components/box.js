@@ -144,7 +144,7 @@ console.log(domain)
     }}
   />
    : ''}
-              <ButtonSend />
+              <ButtonSend isDisabled= {!domain} />
             </Box>
           </form>
         </Grid>
